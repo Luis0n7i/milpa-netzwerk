@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_9c81cbedd345cedc6fd6c940ab5f2c8c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_9c81cbedd345cedc6fd6c940ab5f2c8c" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_9c81cbedd345cedc6fd6c940ab5f2c8c = L.map(
+                "map_9c81cbedd345cedc6fd6c940ab5f2c8c",
+                {
+                    center: [51.1657, 10.4515],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "maxBounds": [
+[
+47.2,
+5.8,
+],
+[
+55.1,
+15.1,
+],
+],
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_a4c4f564585039281e464435e204f6eb = L.tileLayer(
+                "https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 6,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.stadiamaps.com/\" target=\"_blank\"\u003eStadia Maps\u003c/a\u003e \u0026copy; \u003ca href=\"https://openmaptiles.org/\" target=\"_blank\"\u003eOpenMapTiles\u003c/a\u003e \u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_a4c4f564585039281e464435e204f6eb.addTo(map_9c81cbedd345cedc6fd6c940ab5f2c8c);
+        
+    
+            var marker_4d1cf4eedfe7619465762bfd8570e577 = L.marker(
+                [50.9471031, 6.9206875],
+                {
+}
+            ).addTo(map_9c81cbedd345cedc6fd6c940ab5f2c8c);
+        
+    
+            var icon_21ed3e3e2ca61194da5301f4a51bb461 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "seedling",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_72ef451f29db39e4dca924ce002bef3d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_396868111881cf860d788baad4b89eb2 = $(`<div id="html_396868111881cf860d788baad4b89eb2" style="width: 100.0%; height: 100.0%;">Geisselstraße 3-5, 50823 Köln</div>`)[0];
+                popup_72ef451f29db39e4dca924ce002bef3d.setContent(html_396868111881cf860d788baad4b89eb2);
+            
+        
+
+        marker_4d1cf4eedfe7619465762bfd8570e577.bindPopup(popup_72ef451f29db39e4dca924ce002bef3d)
+        ;
+
+        
+    
+    
+            marker_4d1cf4eedfe7619465762bfd8570e577.bindTooltip(
+                `<div>
+                     Allerweltshaus
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4d1cf4eedfe7619465762bfd8570e577.setIcon(icon_21ed3e3e2ca61194da5301f4a51bb461);
+            
+    
+            var marker_88f29e41a55f33b67a5d1309148e2df6 = L.marker(
+                [50.734325, 7.0317022],
+                {
+}
+            ).addTo(map_9c81cbedd345cedc6fd6c940ab5f2c8c);
+        
+    
+            var icon_2b49bbb0c5ce64c46d3a78148fd336e6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "seedling",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a7bf3119858ddda44f3eb4930144aeed = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f32aed2dfe4b820af05ad54726d9ec77 = $(`<div id="html_f32aed2dfe4b820af05ad54726d9ec77" style="width: 100.0%; height: 100.0%;">Rheinweg, 53347 Alfter</div>`)[0];
+                popup_a7bf3119858ddda44f3eb4930144aeed.setContent(html_f32aed2dfe4b820af05ad54726d9ec77);
+            
+        
+
+        marker_88f29e41a55f33b67a5d1309148e2df6.bindPopup(popup_a7bf3119858ddda44f3eb4930144aeed)
+        ;
+
+        
+    
+    
+            marker_88f29e41a55f33b67a5d1309148e2df6.bindTooltip(
+                `<div>
+                     Solawi Alfter e.V.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_88f29e41a55f33b67a5d1309148e2df6.setIcon(icon_2b49bbb0c5ce64c46d3a78148fd336e6);
+            
+    
+            var marker_bb9c0874d5483756eda3a5a751148a41 = L.marker(
+                [51.4759739, 7.2298038],
+                {
+}
+            ).addTo(map_9c81cbedd345cedc6fd6c940ab5f2c8c);
+        
+    
+            var icon_c36ea87ba64269f8c4a0ca3d9cdd1b06 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "seedling",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9fe71f612c69b23fe236489c2a02f5ca = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_06bead5c83f19a26a5c26cd97c136b64 = $(`<div id="html_06bead5c83f19a26a5c26cd97c136b64" style="width: 100.0%; height: 100.0%;">Alsenstraße 19A, 44789 Bochum</div>`)[0];
+                popup_9fe71f612c69b23fe236489c2a02f5ca.setContent(html_06bead5c83f19a26a5c26cd97c136b64);
+            
+        
+
+        marker_bb9c0874d5483756eda3a5a751148a41.bindPopup(popup_9fe71f612c69b23fe236489c2a02f5ca)
+        ;
+
+        
+    
+    
+            marker_bb9c0874d5483756eda3a5a751148a41.bindTooltip(
+                `<div>
+                     Alsengarten
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bb9c0874d5483756eda3a5a751148a41.setIcon(icon_c36ea87ba64269f8c4a0ca3d9cdd1b06);
+            
+    
+            var marker_e788fd046320f147b7e0337ded3eba2f = L.marker(
+                [50.8969545, 7.0589886],
+                {
+}
+            ).addTo(map_9c81cbedd345cedc6fd6c940ab5f2c8c);
+        
+    
+            var icon_8aed14b1d8c65c105db39dbab67059c8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "seedling",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9a7726908e4671bb5dd78c3b51c00783 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_203fa9a7d8291e447f45b0bb2c681c9b = $(`<div id="html_203fa9a7d8291e447f45b0bb2c681c9b" style="width: 100.0%; height: 100.0%;">Theodor-Heuss Straße 2, 51149 Köln</div>`)[0];
+                popup_9a7726908e4671bb5dd78c3b51c00783.setContent(html_203fa9a7d8291e447f45b0bb2c681c9b);
+            
+        
+
+        marker_e788fd046320f147b7e0337ded3eba2f.bindPopup(popup_9a7726908e4671bb5dd78c3b51c00783)
+        ;
+
+        
+    
+    
+            marker_e788fd046320f147b7e0337ded3eba2f.bindTooltip(
+                `<div>
+                     Demogarten in Finkenberg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e788fd046320f147b7e0337ded3eba2f.setIcon(icon_8aed14b1d8c65c105db39dbab67059c8);
+            
+    
+            var marker_068c523f702dddd323f4438095735c02 = L.marker(
+                [47.8707762, 7.7228416],
+                {
+}
+            ).addTo(map_9c81cbedd345cedc6fd6c940ab5f2c8c);
+        
+    
+            var icon_04277320a6758bec7dce232c0abadaea = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "seedling",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_24760b1e1ac1d5da7f0ae2b6a4e405d3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_86ceb4fc132dd063c8b992f4602cc405 = $(`<div id="html_86ceb4fc132dd063c8b992f4602cc405" style="width: 100.0%; height: 100.0%;">Hofmattenweg 13, 79219 Staufen im Breisgau</div>`)[0];
+                popup_24760b1e1ac1d5da7f0ae2b6a4e405d3.setContent(html_86ceb4fc132dd063c8b992f4602cc405);
+            
+        
+
+        marker_068c523f702dddd323f4438095735c02.bindPopup(popup_24760b1e1ac1d5da7f0ae2b6a4e405d3)
+        ;
+
+        
+    
+    
+            marker_068c523f702dddd323f4438095735c02.bindTooltip(
+                `<div>
+                     Fridas Klimagarten
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_068c523f702dddd323f4438095735c02.setIcon(icon_04277320a6758bec7dce232c0abadaea);
+            
+    
+            var marker_0125b0fd3a2bfad7034dd8fc83639a4f = L.marker(
+                [52.6045561, 13.398835],
+                {
+}
+            ).addTo(map_9c81cbedd345cedc6fd6c940ab5f2c8c);
+        
+    
+            var icon_c09aa2735e6cb04285e38c7b169a0dfc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "seedling",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6c8c69cb7de692374a26fd1c3aad5629 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d37360e7523783c886c194612ecd955a = $(`<div id="html_d37360e7523783c886c194612ecd955a" style="width: 100.0%; height: 100.0%;">Blankenfelder Chaussee 5, 13159 Berlin</div>`)[0];
+                popup_6c8c69cb7de692374a26fd1c3aad5629.setContent(html_d37360e7523783c886c194612ecd955a);
+            
+        
+
+        marker_0125b0fd3a2bfad7034dd8fc83639a4f.bindPopup(popup_6c8c69cb7de692374a26fd1c3aad5629)
+        ;
+
+        
+    
+    
+            marker_0125b0fd3a2bfad7034dd8fc83639a4f.bindTooltip(
+                `<div>
+                     Weltacker
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0125b0fd3a2bfad7034dd8fc83639a4f.setIcon(icon_c09aa2735e6cb04285e38c7b169a0dfc);
+            
+</script>
+</html>
