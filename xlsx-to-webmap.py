@@ -52,7 +52,7 @@ marker_locations = milpa_df[milpa_df['Nominatim Adresse'] != "Not Found"]
 marker_locations.apply(create_map_markers, axis="columns", map_name=germany_map)
 
 # Speichern der interaktiven Karte als HTML-Datei
-germany_map.save("website/germany_map.html")
+germany_map.save("docs/germany_map.html")
 
 
 """
