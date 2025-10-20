@@ -30,11 +30,9 @@ print(milpa_df[['Ort', 'Adresse', 'Länge', 'Breite']]) # Ausgabe der gefundenen
 # Erstellen einer Deutschlandkarte mit Folium
 germany_map = folium.Map(
     location=[51.1657, 10.4515], # Geographische Mitte Deutschlands
-    tiles="https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png?api_key={STADIA_API_KEY}",
-    attr='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, '
-         '&copy; <a href="https://openmaptiles.org/">OpenMapTiles</a>, '
-         '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-    name="Stadia Maps (Outdoors)", # Weitere verfügbare Tiles auf https://leaflet-extras.github.io/leaflet-providers/preview/
+    #tiles="None", # Weitere verfügbare Tiles auf https://leaflet-extras.github.io/leaflet-providers/preview/
+    tiles=f"https://tiles.stadiamaps.com/tiles/outdoors/{{z}}/{{x}}/{{y}}{{r}}.png?api_key={STADIA_API_KEY}",
+    attr='&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     zoom_start=6,
     min_zoom=6,
     min_lat=47.2, # Südgrenze Deutschlands
@@ -43,9 +41,6 @@ germany_map = folium.Map(
     max_lon=15.1, # Ostgrenze Deutschlands
     max_bounds=True # Verhindert das Verschieben der Karte über die Grenzen hinaus
 )
-
-# Add Stadia Maps tile layer
-#folium.TileLayer().add_to(germany_map)
 
 # Funktion zum Hinzufügen von Markern auf der Karte
 def create_map_markers(row, map_name):
