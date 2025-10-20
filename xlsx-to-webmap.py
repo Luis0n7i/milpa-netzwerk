@@ -6,6 +6,8 @@ from geopy.geocoders import Nominatim
 import folium
 import pandas as pd
 
+STADIA_API_KEY = "e0b0972e-0660-4f61-9fb3-63142161c94c"
+
 # Einlesen der Excel-Datei mit Milpa-Standorten in einen DataFrame 'milpa_df'
 milpa_df = pd.read_excel("files/milpa-netzwerk.xlsx", sheet_name="Standorte")
 
@@ -37,6 +39,15 @@ germany_map = folium.Map(
     max_lon=15.1, # Ostgrenze Deutschlands
     max_bounds=True # Verhindert das Verschieben der Karte über die Grenzen hinaus
 )
+
+# Add Stadia Maps tile layer
+folium.TileLayer(
+    tiles="https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png?api_key={STADIA_API_KEY}",
+    attr='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, '
+         '&copy; <a href="https://openmaptiles.org/">OpenMapTiles</a>, '
+         '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    name="Stadia Maps (Outdoors)"
+).add_to(germany_map)
 
 # Funktion zum Hinzufügen von Markern auf der Karte
 def create_map_markers(row, map_name):
