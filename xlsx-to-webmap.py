@@ -7,7 +7,7 @@ import folium
 import pandas as pd
 
 # Einlesen der Excel-Datei mit Milpa-Standorten in einen DataFrame 'milpa_df'
-milpa_df = pd.read_excel("C:/Users/Luis0/source/Milpa Netzwerk Prototyp/milpa-netzwerk.xlsx", sheet_name="Standorte")
+milpa_df = pd.read_excel("files/milpa-netzwerk.xlsx", sheet_name="Standorte")
 
 # Initialisierung des Geolocators mit Nominatim (https://geopy.readthedocs.io/en/stable/)
 geolocator = Nominatim(user_agent="Milpa Netzwerk", timeout=2)
@@ -52,7 +52,7 @@ marker_locations = milpa_df[milpa_df['Nominatim Adresse'] != "Not Found"]
 marker_locations.apply(create_map_markers, axis="columns", map_name=germany_map)
 
 # Speichern der interaktiven Karte als HTML-Datei
-germany_map.save("germany_map.html")
+germany_map.save("website/germany_map.html")
 
 
 """
